@@ -1,0 +1,288 @@
+:root {
+  --main-color: #1e3475;
+  --yellow: #dff558;
+  --orange: #f57858;
+  --light-green: #9bf527;
+}
+
+/* Some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+*:focus {
+  outline: 0 !important;
+}
+buton::-moz-focus-inner {
+  border: 0;
+}
+html,
+body,
+#root {
+  min-height: 100%;
+}
+body {
+  -webkit-font-smoothing: antialiased !important;
+  background: var(--main-color);
+  height: 100vh;
+  color: white;
+  font-family: "Roboto";
+}
+
+button {
+  cursor: pointer;
+}
+a {
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* flexing all sections */
+
+section {
+  display: flex;
+  padding-left: 64px;
+  padding-right: 64px;
+  justify-content: space-around;
+}
+
+.texts-container,
+.about-texts {
+  display: flex;
+  max-width: 400px;
+  flex-direction: column;
+}
+.about-texts {
+  max-height: 500px;
+}
+.title {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 16px;
+}
+
+.date {
+  margin-bottom: 16px;
+}
+
+.buy {
+  margin-top: 16px;
+}
+
+button {
+  border: none;
+  width: auto;
+  height: 48px;
+  padding: 16px;
+  background: var(--orange);
+  font-weight: 600;
+  color: white;
+  border-radius: 16px;
+}
+h1 {
+  font-size: 60px;
+  font-weight: 900;
+  margin: 0;
+  padding: 0;
+}
+span {
+  line-height: 24px;
+}
+.emphasis {
+  color: var(--yellow);
+}
+.strong {
+  color: var(--orange);
+}
+
+#main {
+  align-items: center;
+  height: 100%;
+}
+
+#main span {
+  text-align: justify;
+}
+.ghost-image {
+  background: url("../assets/ghost.svg");
+  background-size: contain;
+  width: 100%;
+  max-width: 700px;
+  max-height: 800px;
+  height: 100vh;
+  background-repeat: no-repeat;
+  animation-name: ghost-up-down;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.witch {
+  background: url("../assets/witch.svg");
+  background-size: contain;
+  width: 100%;
+  max-width: 400px;
+  max-height: 500px;
+  height: 100vh;
+  background-repeat: no-repeat;
+}
+
+@keyframes ghost-up-down {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 16px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.event-info {
+  margin-top: 24px;
+}
+
+.e-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+#about button {
+  margin-top: 16px;
+}
+
+.tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 16px;
+  width: 100%;
+  background: #465788;
+  height: 32px;
+  padding-left: 4px;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+
+  font-weight: 600;
+}
+
+.tile-date {
+  border-left: solid 4px var(--light-green);
+}
+
+.tile-place {
+  border-left: solid 4px var(--orange);
+}
+.tile-price {
+  border-left: solid 4px var(--yellow);
+}
+
+#programming {
+  background: #324680;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 64px;
+}
+
+.item:last-child {
+  margin-right: 0;
+}
+
+h3 {
+  font-size: 48px;
+}
+
+footer {
+  display: flex;
+  padding: 32px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+i {
+  margin-right: 8px;
+  transition: all 1s;
+  cursor: pointer;
+}
+
+i:last-child {
+  margin-right: 0;
+}
+
+i:hover {
+  color: var(--orange);
+}
+
+.copyright {
+  margin-top: 16px;
+}
+
+@media screen and (max-width: 800px) {
+  section {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .ghost-image {
+    max-height: 200px;
+    width: 200px;
+    margin-bottom: 16px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .texts-container {
+    align-items: center;
+    padding-left: 32px;
+    padding-right: 32px;
+
+    text-align: justify;
+  }
+
+  #about {
+    padding-left: 32px;
+    padding-right: 32px;
+    text-align: justify;
+
+    margin-top: 32px;
+  }
+
+  .witch {
+    margin-top: 16px;
+    max-height: 300px;
+  }
+
+  #padding {
+    padding: 0;
+  }
+
+  .item {
+    margin: 0;
+    padding-bottom: 32px;
+  }
+
+  .item:last-child {
+    padding: 0;
+  }
+}
